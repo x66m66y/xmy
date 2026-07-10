@@ -1,0 +1,48 @@
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: clamp(22px, 3.2vw, 44px) clamp(22px, 4vw, 58px);
+}
+
+.topbar .el-button { height: 56px; margin: 0; font-size: 15px; font-weight: 600; }
+.menu-button.el-button { width: 58px; border: 1px solid transparent; background: transparent; color: var(--ink); }
+.menu-button:hover, .menu-button:focus-visible { border-color: var(--hairline); background: rgba(255,255,255,.26); }
+.menu-icon { display: grid; width: 32px; gap: 11px; }
+.menu-icon i { display: block; height: 2px; border-radius: 2px; background: currentColor; transition: transform .25s ease; }
+.menu-button:active .menu-icon i:first-child { transform: translateY(3px); }
+.menu-button:active .menu-icon i:last-child { transform: translateY(-3px); }
+
+.top-actions { display: flex; gap: 12px; }
+.top-actions .el-button { padding-inline: 24px; border-color: var(--hairline); color: var(--ink); }
+.top-actions .el-button:active { transform: scale(.95); }
+.story-button.el-button { background: rgba(244,241,231,.68); backdrop-filter: saturate(180%) blur(20px); }
+.download-button.el-button { min-width: 168px; border: 0; background: #18181a; color: #fff; }
+.download-copy { display: grid; text-align: left; line-height: 1; }
+.download-copy small { font-size: 10px; font-weight: 400; letter-spacing: .02em; opacity: .72; }
+.download-copy strong { margin-top: 3px; font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
+.mobile-label { display: none; }
+
+@media (max-width: 640px) {
+  .topbar { padding: 14px 14px 0; }
+  .topbar .el-button { height: 46px; font-size: 13px; }
+  .menu-button.el-button { width: 46px; }
+  .menu-icon { width: 25px; gap: 8px; }
+  .top-actions { gap: 7px; }
+  .top-actions .el-button { padding-inline: 14px; }
+  .story-button .el-icon { margin-right: 4px; }
+  .desktop-label { display: none; }
+  .mobile-label { display: inline; }
+  .download-button.el-button { min-width: 0; width: 46px; padding: 0; }
+  .download-button .el-icon { margin: 0; }
+  .download-copy { display: none; }
+}
+
+@media (max-height: 760px) and (min-width: 641px) {
+  .topbar { padding-top: 22px; }
+}

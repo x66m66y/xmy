@@ -1,0 +1,47 @@
+.hero-content { position: absolute; top: 47%; left: 50%; z-index: 3; width: 100%; transform: translate(-50%, -50%); text-align: center; }
+.xmy-scene { position: relative; width: min(1160px, 88vw); aspect-ratio: 3.57 / 1; margin: 0 auto; }
+.xmy-word { position: absolute; inset: 0; z-index: 2; display: block; width: 100%; height: auto; }
+.character { position: absolute; display: block; object-fit: contain; pointer-events: none; background: transparent; }
+.character-pink { left: -.5%; top: -58%; z-index: 3; width: 25%; transform-origin: 50% 82%; }
+.character-teal { left: 40.4%; top: -11%; z-index: 3; width: 19%; clip-path: polygon(8% 0, 92% 0, 84% 86%, 50% 100%, 16% 86%); transform-origin: 50% 78%; }
+.character-purple { left: 62%; top: -48%; z-index: 5; width: 29%; transform-origin: 46% 83%; }
+.character-green { left: 77.2%; top: 16%; z-index: 5; width: 35%; transform: rotate(10deg); transform-origin: 28% 58%; }
+
+.contact-shadow { position: absolute; z-index: 2; height: 2.2%; border-radius: 50%; background: rgba(0,0,0,.12); filter: blur(3px); }
+.shadow-pink { left: 10.5%; top: 4.5%; width: 6.5%; transform: rotate(-10deg); }
+.shadow-purple { left: 74.3%; top: 8%; width: 7.5%; transform: rotate(13deg); }
+.shadow-green { left: 90%; top: 73%; width: 9%; transform: rotate(16deg); }
+
+.tagline { position: relative; z-index: 8; margin: clamp(28px, 3.6vh, 38px) 20px 0; font-family: "SF Pro Display", "Avenir Next", "Segoe UI", sans-serif; font-size: clamp(20px, 1.6vw, 25px); font-weight: 600; line-height: 1.2; letter-spacing: -.025em; }
+.giant-character { position: absolute; display: block; z-index: 10; pointer-events: none; opacity: 0; object-fit: contain; transition: opacity .16s linear; }
+.giant-character.is-active { opacity: 1; }
+.giant-yellow { left: -10vw; bottom: -1rem; width: clamp(560px, 54vw, 880px); transform-origin: left bottom; }
+.giant-blue { right: 0; bottom: -2.34rem; z-index: 11; width: clamp(760px, 75.4vw, 1400px); transform-origin: right bottom; }
+
+.scroll-cue { position: absolute; left: 50%; bottom: clamp(18px, 3vh, 32px); z-index: 8; display: flex; align-items: center; gap: 10px; transform: translateX(-50%); color: rgba(29,29,31,.5); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.scroll-cue span { width: 28px; height: 1px; background: currentColor; }
+
+@media (max-width: 1024px) {
+  .xmy-scene { width: 90vw; }
+  .character-purple { left: 61%; }
+  .giant-yellow { width: 52vw; min-width: 500px; }
+  .giant-blue { width: 75.4vw; min-width: 760px; }
+}
+
+@media (max-width: 640px) {
+  .hero-content { top: 47%; }
+  .xmy-scene { width: 92vw; }
+  .character-pink { left: 1%; top: -48%; width: 21%; }
+  .character-teal { left: 40%; top: -7%; width: 20%; }
+  .character-purple { left: 58.5%; top: -40%; width: 28%; }
+  .character-green { left: 75%; top: 14%; width: 34%; }
+  .tagline { margin-top: 34px; font-size: 18px; }
+  .giant-yellow { left: -38vw; bottom: -.5rem; width: 120vw; min-width: 0; }
+  .giant-blue { right: -35vw; bottom: -.5rem; width: 135vw; min-width: 0; }
+  .scroll-cue { font-size: 9px; white-space: nowrap; }
+}
+
+@media (max-height: 760px) and (min-width: 641px) {
+  .hero-content { top: 49%; transform: translate(-50%, -47%) scale(.9); }
+  .scroll-cue { display: none; }
+}

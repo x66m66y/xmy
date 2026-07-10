@@ -1,0 +1,12 @@
+:root {
+  --cream: #f4f1e7;
+  --ink: #1d1d1f;
+  --blue: #0066cc;
+  --blue-focus: #0071e3;
+  --hairline: rgba(29, 29, 31, 0.12);
+  font-family: "SF Pro Text", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}

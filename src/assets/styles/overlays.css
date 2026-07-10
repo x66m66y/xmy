@@ -1,0 +1,22 @@
+.xmy-drawer { background: var(--ink) !important; color: #fff; }
+.xmy-drawer .el-drawer__header { margin: 0; padding: 34px 36px; color: #fff; }
+.xmy-drawer .el-drawer__close-btn { color: #fff; }
+.xmy-drawer .el-drawer__body { display: flex; flex-direction: column; padding: 58px 36px 38px; }
+.drawer-mark { font-size: 26px; font-weight: 700; letter-spacing: -.06em; }
+.drawer-links { display: grid; }
+.drawer-links a { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.14); color: #fff; font-size: 34px; font-weight: 600; letter-spacing: -.04em; text-decoration: none; }
+.drawer-links a span { padding-top: 7px; font-size: 11px; letter-spacing: .1em; opacity: .4; }
+.drawer-note { margin-top: auto; color: rgba(255,255,255,.56); font-size: 15px; line-height: 1.5; }
+
+.story-dialog { border-radius: 18px !important; background: var(--cream) !important; }
+.story-dialog .el-dialog__body { padding: 48px; text-align: center; }
+.story-dialog h2 { margin: 26px 0 12px; font-size: 34px; line-height: 1.08; letter-spacing: -.04em; }
+.story-dialog p { max-width: 390px; margin: 0 auto; color: rgba(29,29,31,.66); font-size: 17px; line-height: 1.47; }
+.story-orbit { display: flex; justify-content: center; gap: 7px; }
+.story-orbit span { display: grid; place-items: center; width: 48px; aspect-ratio: 1; border-radius: 50%; background: var(--ink); color: var(--cream); font-size: 18px; font-weight: 700; }
+.story-orbit span:nth-child(2) { transform: translateY(-8px); }
+
+@media (max-width: 640px) {
+  .story-dialog .el-dialog__body { padding: 42px 22px 34px; }
+  .story-dialog h2 { font-size: 28px; }
+}
