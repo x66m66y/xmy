@@ -6,7 +6,7 @@ const routes = [
     name: 'home',
     component: () => import('../views/HomeView.vue'),
     meta: {
-      title: 'XMY — A little world that understands you',
+      title: 'XMY - Projects',
     },
   },
 ]
@@ -18,7 +18,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  document.title = to.meta.title ?? 'XMY'
+  document.title = to.meta.title ?? 'XMY - Projects'
 })
 
 export default router
